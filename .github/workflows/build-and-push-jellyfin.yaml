@@ -5,6 +5,7 @@ on:
       - "master"
     paths:
       - "jellyfin/Dockerfile"
+      - ".github/workflows/build-and-push-jellyfin.yaml"
   workflow_dispatch: {}
 
 env:

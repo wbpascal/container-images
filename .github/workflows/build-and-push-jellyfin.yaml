@@ -30,6 +30,6 @@ jobs:
           context: "{{defaultContext}}:jellyfin"
           push: true
           tags: "infinitesoul/jellyfin:${{ env.JELLYFIN_VERSION }}-ffmpeg${{ env.JELLYFIN_FFMPEG_VERSION }}"
-          build-args:
-            - "JELLYFIN_VERSION=${{ env.JELLYFIN_VERSION }}"
-            - "JELLYFIN_FFMPEG_VERSION=${{ env.JELLYFIN_FFMPEG_VERSION }}"
+          build-args: |
+            "JELLYFIN_VERSION=${{ env.JELLYFIN_VERSION }}"
+            "JELLYFIN_FFMPEG_VERSION=${{ env.JELLYFIN_FFMPEG_VERSION }}"

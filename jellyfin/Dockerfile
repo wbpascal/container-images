@@ -10,7 +10,7 @@ ARG TARGETPLATFORM
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get remove jellyfin-ffmpeg* -y \
-    && curl -Lo ~/jellyfin-ffmpeg.deb https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v${JELLYFIN_FFMPEG_VERSION}/jellyfin-ffmpeg$(echo "${JELLYFIN_FFMPEG_VERSION}" | cut -d '.' -f 1)_${JELLYFIN_FFMPEG_VERSION}-bullseye_(echo "${TARGETPLATFORM}" | cut -d '/' -f 2).deb \
+    && curl -Lo ~/jellyfin-ffmpeg.deb https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v${JELLYFIN_FFMPEG_VERSION}/jellyfin-ffmpeg$(echo "${JELLYFIN_FFMPEG_VERSION}" | cut -d '.' -f 1)_${JELLYFIN_FFMPEG_VERSION}-bullseye_$(echo "${TARGETPLATFORM}" | cut -d '/' -f 2).deb \
     && apt-get install ~/jellyfin-ffmpeg.deb -y \
     && rm ~/jellyfin-ffmpeg.deb \
     && apt-get autoremove -y \

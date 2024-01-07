@@ -10,7 +10,7 @@ on:
 
 env:
   JELLYFIN_VERSION: "10.8.13"
-  JELLYFIN_FFMPEG_VERSION: "6.0-8"
+  JELLYFIN_FFMPEG_VERSION: "6.0.1-1"
 
 jobs:
   docker:
@@ -31,7 +31,7 @@ jobs:
           context: "{{defaultContext}}:jellyfin"
           push: true
           tags: "infinitesoul/jellyfin:${{ env.JELLYFIN_VERSION }}-ffmpeg${{ env.JELLYFIN_FFMPEG_VERSION }}"
-          platforms: linux/amd64,linux/arm/v7,linux/arm64/v8
+          platforms: linux/amd64,linux/arm64
           build-args: |
             "JELLYFIN_VERSION=${{ env.JELLYFIN_VERSION }}"
             "JELLYFIN_FFMPEG_VERSION=${{ env.JELLYFIN_FFMPEG_VERSION }}"

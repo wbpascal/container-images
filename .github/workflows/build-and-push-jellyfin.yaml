@@ -9,7 +9,7 @@ on:
   workflow_dispatch: {}
 
 env:
-  JELLYFIN_VERSION: "10.9.0"
+  JELLYFIN_VERSION: "10.9.1"
   JELLYFIN_FFMPEG_VERSION: "6.0.1-6"
 
 jobs:

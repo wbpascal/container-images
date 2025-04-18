@@ -10,7 +10,7 @@ on:
 
 env:
   JELLYFIN_VERSION: "10.10.6"
-  JELLYFIN_FFMPEG_VERSION: "7.0.2-9"
+  JELLYFIN_FFMPEG_VERSION: "7.1.1-1"
 
 jobs:
   docker:

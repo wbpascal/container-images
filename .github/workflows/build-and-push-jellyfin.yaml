@@ -9,8 +9,8 @@ on:
   workflow_dispatch: {}
 
 env:
-  JELLYFIN_VERSION: "10.11.2"
-  JELLYFIN_FFMPEG_VERSION: "7.1.2-3"
+  JELLYFIN_VERSION: "10.11.3"
+  JELLYFIN_FFMPEG_VERSION: "7.1.2-4"
 
 jobs:
   docker:
